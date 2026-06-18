@@ -1,4 +1,4 @@
-# KIXORA v2 — Sneaker Marketplace
+# KIXORA — Sneaker Marketplace
 
 > Built with Next.js 14 + Express.js in plain JavaScript. No TypeScript.
 
