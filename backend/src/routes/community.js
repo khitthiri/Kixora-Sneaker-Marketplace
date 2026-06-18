@@ -1,0 +1,11 @@
+const router = require('express').Router();
+const { requireAuth, optionalAuth } = require('../middleware/auth');
+const { getCommunityFeed, createPost, reactToPost, getGroups } = require('../controllers/controllers');
+router.get('/', optionalAuth, getCommunityFeed);
+router.get('/feed', optionalAuth, getCommunityFeed);
+router.post('/', requireAuth, createPost);
+router.post('/posts', requireAuth, createPost);
+router.post('/:id/like', requireAuth, reactToPost);
+router.post('/posts/:id/react', requireAuth, reactToPost);
+router.get('/groups', getGroups);
+module.exports = router;
